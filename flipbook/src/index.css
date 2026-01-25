@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+/* Hide left/right background pages from PageFlip */
+.stf__parent {
+  background: transparent !important;
+}
+
+.stf__wrapper {
+  background: transparent !important;
+}
+
+.stf__block {
+  box-shadow: none !important;
+}
+
+/* Hide the offscreen pages */
+.stf__item--left,
+.stf__item--right {
+  display: none !important;
+}
+
+/* Hide number input arrows */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+/* 
+Custom classes for 3D flip effect
+ */
+
+ .perspective { perspective: 2000px; }
+ .backface-hidden { backface-visibility: hidden; }
+ * { user-select: none; -webkit-user-drag: none; }
+
+ 
+.rotate-x-\[180deg\] {
+  transform: rotateX(180deg);
+}
+
+/* Prevent selecting while dragging pages */
+* {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #fce9b7; /* your paper vibe */
+}
+
+
