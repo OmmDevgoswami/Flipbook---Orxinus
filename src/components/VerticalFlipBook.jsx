@@ -12,7 +12,7 @@ export default function VerticalFlipBook({ pages }) {
 
   // Load flip sound
   useEffect(() => {
-    flipSoundRef.current = new Audio("/flip.mp3");
+    flipSoundRef.current = new Audio("flip.mp3");
     flipSoundRef.current.volume = 0.3;
   }, []);
 
