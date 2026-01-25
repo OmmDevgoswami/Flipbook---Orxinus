@@ -6,11 +6,11 @@ export default function ViewBooklet() {
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
-    fetch("/book/book.json")
+    fetch("book/book.json")
       .then(res => res.json())
       .then(data => {
         const loadedPages = data.pages.map(name => ({
-          image_url: `/book/${name}`
+          image_url: `book/${name}`
         }));
         setPages(loadedPages);
       });
